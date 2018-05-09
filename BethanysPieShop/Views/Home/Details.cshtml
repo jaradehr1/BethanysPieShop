@@ -1,0 +1,20 @@
+﻿@model Pie
+
+
+<h2 class="my-4 text-center text-lg-left">@Model.Name</h2>
+
+<div class="row">
+    <div class="portfolio-item">
+        <div class="card h-100">
+            <img class="card-img-top" alt="@Model.Name" src="@Model.ImageUrl">
+            <div class="card-body">
+                <h3 class="pull-right">$ @Model.Price</h3>
+                <h4 class="card-title">
+                    <a href="#">@Model.Name</a>
+                </h4>
+                <h4>@Model.ShortDescription</h4>
+                <p class="card-text">@Model.LongDescription</p>
+            </div>
+        </div>
+    </div>
+</div>

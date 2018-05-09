@@ -1,0 +1,22 @@
+﻿@model HomeViewModel
+
+
+<h2 class="my-4 text-center text-lg-left">@Model.Title</h2>
+
+
+<div class="row">
+    @foreach (var pie in Model.Pies)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+                <img class="card-img-top" src="@pie.ImageThumbnailUrl" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@pie.Id">@pie.Name</a>
+                    </h4>
+                    <p>@pie.ShortDescription</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
